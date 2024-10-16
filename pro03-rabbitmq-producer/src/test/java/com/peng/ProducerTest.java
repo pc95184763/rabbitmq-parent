@@ -21,7 +21,7 @@ public class ProducerTest {
     @Test
     public void test01 () {
         CorrelationData correlationData = new CorrelationData(UUID.randomUUID().toString() );
-        rabbitTemplate.convertAndSend("direct_exchange002" ,"abc"," 这是一条发给交换机的需要确认的消息",correlationData);
+        rabbitTemplate.convertAndSend("direct_exchange002" ,"abc"," 这是一条发给交换机的需要确认的消息5",correlationData);
     }
 
 
@@ -49,6 +49,11 @@ public class ProducerTest {
                     return message;
                 }
                 , correlationData);
+    }
+
+    @Test
+    public void test05() {
+
     }
 
 }

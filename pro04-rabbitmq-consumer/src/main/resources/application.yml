@@ -7,10 +7,11 @@ spring:
     virtual-host: /
     listener:
       simple:
-        acknowledge-mode: auto
-        retry:
-          enabled: true
-          max-attempts: 2
-          initial-interval: 2000
-          max-interval: 5000
-          multiplier: 2
+        acknowledge-mode: none
+        prefetch: 5           # 预抓取5个
+#        retry:
+#          enabled: true
+#          max-attempts: 2
+#          initial-interval: 2000
+#          max-interval: 5000
+#          multiplier: 2
