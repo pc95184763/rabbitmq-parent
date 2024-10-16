@@ -1,0 +1,16 @@
+spring:
+  rabbitmq:
+    host: 192.168.6.100
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: auto
+        retry:
+          enabled: true
+          max-attempts: 2
+          initial-interval: 2000
+          max-interval: 5000
+          multiplier: 2

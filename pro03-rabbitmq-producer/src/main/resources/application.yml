@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    host: 192.168.6.100
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    publisher-confirm-type: correlated
+    publisher-returns: true                #开启生产者的回退
+
+
+
+
+
