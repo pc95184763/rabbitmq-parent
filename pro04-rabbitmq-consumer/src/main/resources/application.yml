@@ -7,7 +7,7 @@ spring:
     virtual-host: /
     listener:
       simple:
-        acknowledge-mode: none
+        acknowledge-mode: auto
         prefetch: 5           # 预抓取5个
 #        retry:
 #          enabled: true

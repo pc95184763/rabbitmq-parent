@@ -17,10 +17,10 @@ public class ConsumerListener {
 //    @RabbitListener(queues = "direct_queue03")
 //    public void consumer01(String msg) {
 //        System.out.println("从简单队列中获取了一个消息: " + msg);
-////        int res = 1 /0;
+//        int res = 1 /0;
 //    }
 
-    @RabbitListener(queues = "direct_queue03")
+//    @RabbitListener(queues = "direct_queue03")
     public void consumer01(Message msg, Channel channel) {
         long deliveryTag = msg.getMessageProperties().getDeliveryTag();
         System.out.println("从简单队列中获取了一个消息: Id: " + deliveryTag + "内容： " + new String(msg.getBody()) );
@@ -32,12 +32,15 @@ public class ConsumerListener {
 
             throw new RuntimeException(e);
         }
+
     }
 
     @RabbitListener(queues = "direct_queue03")
     public void receiver03(String msg) throws InterruptedException {
-        System.out.println("消费者接收到消息: " + msg);
+        System.out.println("消费者接收到消息: " + msg  );
         Thread.sleep(5000 );
+//        int res = 3 / 0;
+
     }
 
 

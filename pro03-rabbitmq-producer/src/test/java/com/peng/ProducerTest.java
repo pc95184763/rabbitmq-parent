@@ -54,6 +54,10 @@ public class ProducerTest {
     @Test
     public void test05() {
 
+        for (int i = 0; i < 10; i++) {
+            rabbitTemplate.convertAndSend("direct_exchange002" ,"abc"," 这是一条发给交换机的需要确认的消息" +i);
+        }
+
     }
 
 }
