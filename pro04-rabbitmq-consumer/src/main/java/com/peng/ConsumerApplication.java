@@ -9,6 +9,7 @@ public class ConsumerApplication {
     public static void main(String[] args) {
         SpringApplication.run( ConsumerApplication.class, args );
 //        int res = 1 / 0;
+        System.out.println("Hello !");
     }
 
 
